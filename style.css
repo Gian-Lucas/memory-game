@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: rgb(15, 22, 39);
+  color: rgb(230, 235, 240);
+}
+
+.container {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.container h1 {
+  font-size: 5rem;
+}
+.container h1 span {
+  cursor: pointer;
+  font-size: 3rem;
+}
+.container h1 span span {
+  color: rgb(4, 7, 214);
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1080px;
+  margin: 4rem auto 0;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 18rem;
+  background: rgb(0, 44, 102);
+  border-radius: 8px;
+  font-size: 10rem;
+  border: 0.5rem solid;
+  transition: color 1s;
+  transition: background-color 0.3s;
+}
+
+.card:not(.active):hover {
+  background: rgb(0, 60, 139);
+}
+
+.click-rotate {
+  transition: 0.6s;
+  transform: rotateY(360deg);
+}
+
+.active {
+  background: rgb(4, 7, 214);
+}
+
+.finished {
+  background: transparent;
+  color: rgb(48, 247, 9);
+  border-color: rgb(48, 247, 9);
+  animation: card-rotate-success 1s;
+}
+
+.error {
+  background: rgb(238, 16, 16);
+  color: rgb(230, 235, 240);
+  border-color: transparent;
+  animation: card-rotate-error 1s;
+}
+
+@keyframes card-rotate-success {
+  25% {
+    transform: rotate(10deg);
+    background: rgb(48, 247, 9);
+    color: rgb(230, 235, 240);
+    border-color: transparent;
+  }
+  50% {
+    transform: rotate(-10deg);
+    background: rgb(48, 247, 9);
+    color: rgb(230, 235, 240);
+    border-color: transparent;
+  }
+  100% {
+    transform: rotate(0);
+    background: rgb(48, 247, 9);
+    color: rgb(230, 235, 240);
+    border-color: transparent;
+  }
+}
+@keyframes card-rotate-error {
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 425px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 30%;
+  }
+}
