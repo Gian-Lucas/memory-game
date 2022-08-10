@@ -69,10 +69,10 @@ const game = {
   handleCardClick(cardIndex) {
     const card = this.data.cards[cardIndex];
 
+    if (card.finished || card.disabled) return;
+
     cardAudio.play();
     this.addClass([card], ["click-rotate"]);
-
-    if (card.finished || card.disabled) return;
 
     if (!card.active) {
       const cardsActives = this.data.cards.filter(
@@ -83,6 +83,8 @@ const game = {
       this.updateCardKeys([card], [true, true]);
 
       if (cardsActives.length === 1) {
+        this.disableAllCards();
+        console.log(this.data.cards);
         const cardTwo = cardsActives[0];
 
         if (cardTwo.value === card.value) {
@@ -106,6 +108,10 @@ const game = {
                 "Fim de Jogo! <br /> <span>Clique <span onclick='game.resetGame()'>AQUI</span> para jogar novamente</span>";
               winnerElement.innerHTML = `<img src="./assets/mario.gif" alt="Mário" />`;
             }, 1500);
+          } else {
+            setTimeout(() => {
+              this.enableAllCards();
+            }, 800);
           }
         } else {
           setTimeout(() => {
@@ -120,6 +126,7 @@ const game = {
               "?"
             );
             this.updateCardKeys([card, cardTwo], [false, false]);
+            this.enableAllCards();
           }, 2000);
         }
       }
@@ -127,6 +134,12 @@ const game = {
       this.removeClass([card], ["active", "click-rotate"], "?");
       card.active = false;
     }
+  },
+  disableAllCards() {
+    this.updateCardKeys(this.data.cards, [undefined, true, undefined]);
+  },
+  enableAllCards() {
+    this.updateCardKeys(this.data.cards, [undefined, false, undefined]);
   },
   updateCardKeys(cards, keyValues) {
     for (const card of cards) {
