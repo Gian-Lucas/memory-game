@@ -41,15 +41,16 @@ body {
 }
 
 .card {
+  padding: 1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16rem;
-  height: 18rem;
+  width: 32rem;
+  height: 36rem;
   background: rgb(0, 44, 102);
   border-radius: 8px;
-  font-size: 10rem;
+  font-size: 14rem;
   border: 0.5rem solid;
   transition: color 1s;
   transition: background-color 0.3s;
@@ -65,10 +66,12 @@ body {
 }
 
 .active {
+  font-size: 2rem;
   background: rgb(4, 7, 214);
 }
 
 .finished {
+  font-size: 2rem;
   background: transparent;
   color: rgb(48, 247, 9);
   border-color: rgb(48, 247, 9);
@@ -76,6 +79,7 @@ body {
 }
 
 .error {
+  font-size: 2rem;
   background: rgb(238, 16, 16);
   color: rgb(230, 235, 240);
   border-color: transparent;
