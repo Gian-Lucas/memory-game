@@ -151,6 +151,7 @@ const game = {
               titleElement.innerHTML =
                 "Fim de Jogo! <br /> <span>Clique <span onclick='game.resetGame()'>AQUI</span> para jogar novamente</span>";
               winnerElement.innerHTML = `<img src="./assets/mario.gif" alt="Mário" />`;
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }, 1500);
           } else {
             setTimeout(() => {
