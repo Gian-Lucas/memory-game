@@ -38,7 +38,7 @@ const questionsAndResponses = [
   },
   {
     id: 4,
-    text: "(Resposta) Pesquisa Primária: é uma pesquisa que partirá do ponto zero, e que seguirá somente por observações ou fenômenos naturais. Pesquisa de Levantamento: São pesquisas que podem começar do zero ou de algum ponto mais avançado, elas se constituem de questionamentos para pessoas de um certo âmbito. Pesquisa Experimental: É uma pesquisa que fará vários testes e partirá de algum embasamento para conseguir definir algum resultado final.",
+    text: "(Resposta) Primária: ela partirá do ponto zero, e que seguirá somente por observações ou fenômenos naturais. Levantamento: Podem começar do zero ou de algum ponto mais avançado, elas se constituem de questionamentos para pessoas de um certo âmbito. Experimental: Fará vários testes e partirá de algum embasamento para conseguir definir algum resultado final.",
   },
 
   {
