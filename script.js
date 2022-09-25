@@ -10,35 +10,44 @@ const cardAudio = document.querySelector(".card-audio");
 const questionsAndResponses = [
   {
     id: 1,
-    text: "(Questão) Todas as pesquisas podem ser consideradas ciências nomotéticas ou idiográficas?",
+    text: "(Questão) Quais os principais tipos de pesquisas e suas subáreas apontados por Wazlawick, em seu livro Metodologia de Pesquisa para Ciência da Computação?",
   },
   {
     id: 1,
-    text: "(Resposta) Não. O estudo da ciência nomotética estuda os fenômenos que se repetem, podendo assim, fazer previsões e descobrir leis gerais que à geram. Como exemplo temos as previsões do tempo. Já a idiográfica, é totalmente o contrário. Estudam os casos únicos que não se repetem, mesmo assim, tem argumentos suficientes para validar o campo do estudo.",
+    text: "(Resposta) Pesquisas quanto a sua Natureza: Primária, Secundária e Terciária. Pesquisas quanto a seus Objetivos: Exploratória, Explicativa, Descritiva e de Design. Pesquisas quanto a seus Procedimentos Técnicos: Estudo de Caso, Experimental, de Levantamento, Etnográfica, Pesquisa Ação, Documental e Bibliográfica.",
   },
   {
     id: 2,
-    text: "(Questão) A ciência também pode ser caracterizada em ciências exatas e ciências inexatas. Dessa maneira, qual a diferença entre elas?",
+    text: "(Questão) Uma pesquisa bibliográfica é aquela que analisa estudos já feitos com intuito de ampliar o conhecimento, com quais outros tipos de pesquisa ela pode se relacionar?",
   },
   {
     id: 2,
-    text: "(Resposta) As ciências exatas são aquelas cujos resultados são precisos. Suas leis são altamente preditivas e previsíveis, já as ciências inexatas, são aquelas que podem prever comportamentos gerais de seus fenômenos, mas cujos resultados nem sempre são os esperados.",
+    text: "(Resposta) Com uma pesquisa secundária que faz revisões de pesquisas primárias. Com uma pesquisa explicativa que visa abordar um certo assunto, sendo de maneira mais aprofundada.",
   },
   {
     id: 3,
-    text: "(Questão) Dissertações e teses em Computação, bem como artigos científicos, ainda são fortemente caracterizados como apresentações técnicas: sistemas, protótipos, frameworks, arquiteturas, modelos, processos, todas essas construções são técnicas e não necessariamente Ciência, explique o por quê.",
+    text: "(Questão) Entre as 14 subdivisões dos tipos de pesquisas, há uma que objetiva principalmente a coleta de dados em campo e a partir disto a elaboração de hipóteses, ideias e talvez testes no campo estudado. Qual essa subdivisão?",
   },
   {
     id: 3,
-    text: "(Resposta) a Ciência é a busca pelo conhecimento e pelas explicações, mas a técnica não tem por vocação explicar o mundo. Ela é prática e existe para transformar o mundo, não para teorizar sobre ele. É necessário que a informação contida nele explique um pouco mais sobre o porquê das coisas funcionarem como funcionam.",
+    text: "(Resposta) A pesquisa Etnográfica tem como sua principal função a coleta de dados em campo e avaliação da utilização destes dados, seja de maneira experimental ou observacional.",
   },
   {
     id: 4,
-    text: "(Questão) O aspecto da ciência básica da Computação é algo difícil, pois a maioria de suas pesquisas são de fácil prática e comprovação. Então diga um exemplo de um estudo que só veio ter aplicações práticas depois de ser desenvolvida:",
+    text: "(Questão) Diga a diferença entre as pesquisas Primárias, de Levantamento e Experimentais. Defina cada uma delas e diga em que elas se diferem.",
   },
   {
     id: 4,
-    text: "(Resposta) A teoria do Caos é um ótimo exemplo de uma ciência básica, pois se ela evolui de acordo com fenômenos provocados por ferramentas computacionais. Outros exemplos são os sistemas multiagentes e matemática computacional",
+    text: "(Resposta) Pesquisa Primária: é uma pesquisa que partirá do ponto zero, e que seguirá somente por observações ou fenômenos naturais. Pesquisa de Levantamento: São pesquisas que podem começar do zero ou de algum ponto mais avançado, elas se constituem de questionamentos para pessoas de um certo âmbito. Pesquisa Experimental: É uma pesquisa que fará vários testes e partirá de algum embasamento para conseguir definir algum resultado final.",
+  },
+
+  {
+    id: 5,
+    text: "(Questão) Uma pesquisa Terciária pertence a um nicho muito específico dentre os tipos de pesquisa. Com base nessa informação há algum tipo de pesquisa que se relacione com a pesquisa terciária? Se sim  qual?",
+  },
+  {
+    id: 5,
+    text: "(Resposta) Sim, A pesquisa descritiva pois esta também parte de uma ampla base de dados para ser formulada, assim ela tende a pesquisa terciária por ambas tratarem muitas vezes de revisões. A pesquisa Documental pode não se ligar diretamente por se tratar de estudos ainda não publicados, mas podem compartilharem dados e ambas serem publicadas juntas.",
   },
 ];
 
