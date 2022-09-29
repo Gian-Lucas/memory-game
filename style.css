@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1080px;
+  /* max-width: 1080px; */
   margin: 4rem auto 0;
   flex-wrap: wrap;
   gap: 3rem;
@@ -46,8 +46,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32rem;
-  height: 36rem;
+  width: 28rem;
+  height: 32rem;
   background: rgb(0, 44, 102);
   border-radius: 8px;
   font-size: 14rem;
@@ -75,6 +75,7 @@ body {
   background: transparent;
   color: rgb(48, 247, 9);
   border-color: rgb(48, 247, 9);
+  background: rgb(11, 17, 32);
   animation: card-rotate-success 1s;
 }
 

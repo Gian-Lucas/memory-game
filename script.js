@@ -10,44 +10,44 @@ const cardAudio = document.querySelector(".card-audio");
 const questionsAndResponses = [
   {
     id: 1,
-    text: "(Questão) Quais os principais tipos de pesquisas e suas subáreas apontados por Wazlawick, em seu livro Metodologia de Pesquisa para Ciência da Computação?",
+    text: "<span><strong><em>(Questão)</em></strong> Dentre todas as subáreas qual a mais difícil de se trabalhar e porquê?</span>",
   },
   {
     id: 1,
-    text: "(Resposta) Pesquisas quanto a sua Natureza: Primária, Secundária e Terciária. Pesquisas quanto a seus Objetivos: Exploratória, Explicativa, Descritiva e de Design. Pesquisas quanto a seus Procedimentos Técnicos: Estudo de Caso, Experimental, de Levantamento, Etnográfica, Pesquisa Ação, Documental e Bibliográfica.",
+    text: "<span><strong><em>(Resposta)</em></strong> A pesquisa de design é extremamente difícil por se tratar de uma ideia tão inovadora, e também por possuir o conceito de ter possíveis soluções para problemas ainda não explorados.</span>",
   },
   {
     id: 2,
-    text: "(Questão) Uma pesquisa bibliográfica é aquela que analisa estudos já feitos com intuito de ampliar o conhecimento, com quais outros tipos de pesquisa ela pode se relacionar?",
+    text: "<span><strong><em>(Questão)</em></strong> Uma pesquisa bibliográfica é aquela que analisa estudos já feitos com intuito de ampliar o conhecimento, com quais outros tipos de pesquisa ela pode se relacionar?</span>",
   },
   {
     id: 2,
-    text: "(Resposta) Com uma pesquisa secundária que faz revisões de pesquisas primárias. Com uma pesquisa explicativa que visa abordar um certo assunto, sendo de maneira mais aprofundada.",
+    text: "<span><strong><em>(Resposta)</em></strong> Com uma pesquisa secundária que faz revisões de pesquisas primárias. Com uma pesquisa explicativa que visa abordar um certo assunto, sendo de maneira mais aprofundada.</span>",
   },
   {
     id: 3,
-    text: "(Questão) Entre as 14 subdivisões dos tipos de pesquisas, há uma que objetiva principalmente a coleta de dados em campo e a partir disto a elaboração de hipóteses, ideias e talvez testes no campo estudado. Qual essa subdivisão?",
+    text: "<span><strong><em>(Questão)</em></strong> As pesquisas ditas por Wazlawick estão classificadas em 3 áreas e 14 subáreas, algum artigo pode estar em duas subdivisões de duas áreas diferentes? Diga um exemplo.</span>",
   },
   {
     id: 3,
-    text: "(Resposta) A pesquisa Etnográfica tem como sua principal função a coleta de dados em campo e avaliação da utilização destes dados, seja de maneira experimental ou observacional.",
+    text: "<span><strong><em>(Resposta)</em></strong> Sim. Uma pesquisa bibliográfica da 2° categoria pode muito bem ser uma pesquisa secundária da 1° categoria.</span>",
   },
   {
     id: 4,
-    text: "(Questão) Diga a diferença entre as pesquisas Primárias, de Levantamento e Experimentais. Defina cada uma delas e diga em que elas se diferem.",
+    text: "<span><strong><em>(Questão)</em></strong> Correlacione, exemplificando, duas subcategorias dentre as 14.</span>",
   },
   {
     id: 4,
-    text: "(Resposta) Primária: ela partirá do ponto zero, e que seguirá somente por observações ou fenômenos naturais. Levantamento: Podem começar do zero ou de algum ponto mais avançado, elas se constituem de questionamentos para pessoas de um certo âmbito. Experimental: Fará vários testes e partirá de algum embasamento para conseguir definir algum resultado final.",
+    text: "<span><strong><em>(Resposta)</em></strong> A pesquisa experimental e a pesquisa etnográfica, ambas se tratam de pesquisas que envolvem testes para suas hipóteses e podem fazer parte em conjunto de um artigo científico facilmente.</span>",
   },
 
   {
     id: 5,
-    text: "(Questão) Uma pesquisa Terciária pertence a um nicho muito específico dentre os tipos de pesquisa. Com base nessa informação há algum tipo de pesquisa que se relacione com a pesquisa terciária? Se sim  qual?",
+    text: "<span><strong><em>(Questão)</em></strong> O estudo de caso possui duas subdivisões, quais são? Diferencia-as.</span>",
   },
   {
     id: 5,
-    text: "(Resposta) Sim, A pesquisa descritiva pois esta também parte de uma ampla base de dados para ser formulada, assim ela tende a pesquisa terciária por ambas tratarem muitas vezes de revisões. A pesquisa Documental pode não se ligar diretamente por se tratar de estudos ainda não publicados, mas podem compartilharem dados e ambas serem publicadas juntas.",
+    text: "<span><strong><em>(Resposta)</em></strong> O estudo de caso exploratório e o estudo de caso confirmatório, a maior diferença entre eles é que o exploratório é muito utilizado para estudar novas áreas e novas ideias, já o confirmatório é para confirmar ideias já formuladas.</span>",
   },
 ];
 
@@ -99,6 +99,7 @@ const game = {
 
     gameElement.innerHTML = "";
     for (const card of this.data.cards) {
+      // console.log(card.value.id);
       gameElement.innerHTML += `<div onclick="game.handleCardClick(${card.index})" class="card">?</div>`;
     }
   },
@@ -133,12 +134,12 @@ const game = {
             this.addClass(
               [card],
               ["finished"],
-              `${card.value.id} - ${card.value.text}`
+              `<div><strong><em>${card.value.id} -</em></strong> ${card.value.text}</div>`
             );
             this.addClass(
               [cardTwo],
               ["finished"],
-              `${cardTwo.value.id} - ${cardTwo.value.text}`
+              `<div><strong><em>${cardTwo.value.id} -</em></strong> ${cardTwo.value.text}`
             );
           }, 700);
 
@@ -199,7 +200,7 @@ const game = {
     for (const card of cards) {
       for (const className of classes) {
         cardElements[card.index].classList.remove(className);
-        cardElements[card.index].innerText = text ? text : card.value.text;
+        cardElements[card.index].innerHTML = text ? text : card.value.text;
       }
     }
   },
@@ -209,7 +210,7 @@ const game = {
     for (const card of cards) {
       for (const className of classes) {
         cardElements[card.index].classList.add(className);
-        cardElements[card.index].innerText = text ? text : card.value.text;
+        cardElements[card.index].innerHTML = text ? text : card.value.text;
       }
     }
   },
